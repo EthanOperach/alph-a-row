@@ -1,0 +1,39 @@
+.streakInput {
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: "Georgia";
+    min-height: 150px;
+    font-size: 30px;
+    white-space: pre;
+}
+.streakResult {
+    margin: auto;
+    text-align: center;
+    font-family: "Georgia";
+    font-size: 30px;
+}
+.match {
+    color: red;
+    text-decoration: underline;
+}
+.cursor {
+    position: relative;
+}
+.cursor i {
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-color: black;
+    margin-top: 5px;
+    animation-name: blink;
+    animation-timing-function: steps(2, jump-none);
+    animation-duration: 1200ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}

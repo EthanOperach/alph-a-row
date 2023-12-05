@@ -26,7 +26,7 @@ function App() {
     // finds longest streak with regex matching
     const matches = [...input.matchAll(pattern)].map(match => match[0]);
     if (matches.length > 0) {
-      setlongestStreak(matches.reduce((a, b) => a.length > b.length ? a : b));
+      setlongestStreak(matches.reduce((a, b) => a.replace(/ /g, '').length >= b.replace(/ /g, '').length ? a : b));
       setMatchLength(longestStreak.replace(/ /g, '').length)
     }
     if (input.length === 0) {
